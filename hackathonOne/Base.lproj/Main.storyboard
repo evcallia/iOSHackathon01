@@ -19,28 +19,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYD-xu-zHb">
-                                <rect key="frame" x="283" y="285" width="34" height="30"/>
+                                <rect key="frame" x="268" y="276" width="64" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <segue destination="wY1-3g-92q" kind="show" id="tyY-im-8Il"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUn-HN-iiA">
-                                <rect key="frame" x="279" y="285" width="43" height="30"/>
-                                <state key="normal" title="Start2"/>
-                                <connections>
-                                    <segue destination="PFr-XT-CaX" kind="show" id="XnB-9I-xph"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyj-DX-AFd">
-                                <rect key="frame" x="279" y="285" width="43" height="30"/>
+                                <rect key="frame" x="259" y="276" width="82" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Start3"/>
                                 <connections>
                                     <segue destination="zuT-u3-Eof" kind="show" id="F7X-nN-7lc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6a-Wf-sko">
-                                <rect key="frame" x="278.5" y="285" width="43" height="30"/>
+                                <rect key="frame" x="259" y="276" width="82" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Start4"/>
                                 <connections>
                                     <segue destination="Udj-mA-Tme" kind="show" id="Lx7-2f-gYA"/>
@@ -51,6 +47,14 @@
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="resetClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d23-hG-qfy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUn-HN-iiA">
+                                <rect key="frame" x="259.5" y="276" width="81" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Start2"/>
+                                <connections>
+                                    <segue destination="PFr-XT-CaX" kind="show" id="XnB-9I-xph"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,6 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="275" y="360"/>
         </scene>
         <!--Task Word Puzzle Controller-->
         <scene sceneID="dGF-6u-0qG">
@@ -133,10 +138,17 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The word was___" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEl-s4-UoU">
+                                <rect key="frame" x="236" y="559" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="VSv-xA-ELb" firstAttribute="top" secondItem="G77-oZ-Qsf" secondAttribute="bottom" constant="27" id="9Lc-Fe-iDp"/>
+                            <constraint firstItem="URa-4l-HaH" firstAttribute="top" secondItem="OEl-s4-UoU" secondAttribute="bottom" constant="20" id="DMB-AR-etx"/>
                             <constraint firstItem="VHX-iH-Kg1" firstAttribute="top" secondItem="mS2-mN-3OR" secondAttribute="bottom" constant="8" id="GwY-zg-Onf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VHX-iH-Kg1" secondAttribute="trailing" constant="2" id="MmX-gy-zVQ"/>
                             <constraint firstItem="G77-oZ-Qsf" firstAttribute="top" secondItem="mS2-mN-3OR" secondAttribute="bottom" constant="8" id="Nge-8U-Kql"/>
@@ -144,6 +156,7 @@
                             <constraint firstItem="VSv-xA-ELb" firstAttribute="centerX" secondItem="4cU-V7-jkk" secondAttribute="centerX" id="Qu0-HE-Ddd"/>
                             <constraint firstItem="lD2-bi-4qu" firstAttribute="top" secondItem="VSv-xA-ELb" secondAttribute="bottom" constant="28" id="Rsy-Rm-Ty3"/>
                             <constraint firstItem="NkX-cj-2UK" firstAttribute="centerX" secondItem="4cU-V7-jkk" secondAttribute="centerX" id="WGE-92-hR3"/>
+                            <constraint firstItem="OEl-s4-UoU" firstAttribute="centerX" secondItem="4cU-V7-jkk" secondAttribute="centerX" id="YA3-hB-L3h"/>
                             <constraint firstItem="G77-oZ-Qsf" firstAttribute="centerX" secondItem="4cU-V7-jkk" secondAttribute="centerX" id="efv-oy-0cS"/>
                             <constraint firstItem="lD2-bi-4qu" firstAttribute="centerX" secondItem="4cU-V7-jkk" secondAttribute="centerX" id="hm5-SJ-wYM"/>
                             <constraint firstItem="ZSN-xz-Zz1" firstAttribute="centerY" secondItem="4cU-V7-jkk" secondAttribute="centerY" id="jXb-kL-fpf"/>
@@ -151,6 +164,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="correctWordLabel" destination="OEl-s4-UoU" id="5x7-eu-njJ"/>
                         <outlet property="homeLabel" destination="VHX-iH-Kg1" id="Sxw-wJ-VWf"/>
                         <outlet property="scrambledWordLabel" destination="lD2-bi-4qu" id="yxG-1I-KCR"/>
                         <outlet property="timerLabel" destination="G77-oZ-Qsf" id="GWB-dl-25r"/>
@@ -602,6 +616,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3Mk-B5-ANR"/>
+        <segue reference="XeR-Xa-rtZ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -21,6 +21,7 @@ class TaskWordPuzzleController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var homeLabel: UIButton!
     @IBOutlet weak var winLoseLabel: UILabel!
+    @IBOutlet weak var correctWordLabel: UILabel!
     @IBOutlet weak var scrambledWordLabel: UILabel!
     
     @IBAction func userInput(sender: UITextField) {
@@ -30,8 +31,8 @@ class TaskWordPuzzleController: UIViewController {
             winLoseLabel.hidden = false
             homeLabel.hidden = false
             difficulty[1] -= 3
-            if difficulty[1] <= 3{
-                difficulty[1] = 3
+            if difficulty[1] <= 5{
+                difficulty[1] = 5
             }
         }
     }
@@ -61,6 +62,8 @@ class TaskWordPuzzleController: UIViewController {
             winLoseLabel.text = "You Lost"
             winLoseLabel.hidden = false
             homeLabel.hidden = false
+            correctWordLabel.hidden = false
+            correctWordLabel.text = "The word was \(word)"
         }
     }
     
@@ -69,6 +72,7 @@ class TaskWordPuzzleController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         homeLabel.hidden = true
         winLoseLabel.hidden = true
+        correctWordLabel.hidden = true
         timerLabel.text = String(timerCount)
         selectWord()
         nsTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)

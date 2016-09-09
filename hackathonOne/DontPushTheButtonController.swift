@@ -19,7 +19,7 @@ class DontPushTheButtonController: UIViewController {
     @IBOutlet weak var numberTimesLabel: UILabel!
     
     var times = difficulty[2]
-    var timerCount = 10
+    var timerCount = 5
     var nsTimer = NSTimer()
     
     @IBAction func buttonPushed(sender: UIButton) {
