@@ -16,7 +16,7 @@ class TaskWordPuzzleController: UIViewController {
     let wordList = ["hello", "mouse", "puzzle", "butt", "hair", "onyx", "fluke", "railroad", "dojo", "program", "bubble", "supercalifragilisticexpialidocious", "southwest", "jump"]
     var scrambledWord = ""
     var word = String()
-    
+    var nsTimer = NSTimer()
     
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var homeLabel: UIButton!
@@ -25,6 +25,7 @@ class TaskWordPuzzleController: UIViewController {
     
     @IBAction func userInput(sender: UITextField) {
         if sender.text == word{ //They guessed it!
+            nsTimer.invalidate()
             winLoseLabel.text = "You Won"
             winLoseLabel.hidden = false
             homeLabel.hidden = false
@@ -70,7 +71,7 @@ class TaskWordPuzzleController: UIViewController {
         winLoseLabel.hidden = true
         timerLabel.text = String(timerCount)
         selectWord()
-        var _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
+        nsTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
     }
     
     override func didReceiveMemoryWarning() {

@@ -20,8 +20,10 @@ class DontPushTheButtonController: UIViewController {
     
     var times = difficulty[2]
     var timerCount = 10
+    var nsTimer = NSTimer()
     
     @IBAction func buttonPushed(sender: UIButton) {
+        nsTimer.invalidate()
         winLoseLabel.text = "You Lose"
         homeLabel.hidden = false
         button.hidden = true
@@ -49,7 +51,7 @@ class DontPushTheButtonController: UIViewController {
         winLoseLabel.hidden = true
         timerLabel.text = String(timerCount)
         numberTimesLabel.text = String(times)
-        var _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
+        nsTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
         
     }
     

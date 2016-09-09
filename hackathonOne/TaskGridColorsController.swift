@@ -15,6 +15,7 @@ class TaskGridColorsController: UIViewController {
     var timerCount = difficulty[0]
     var color = UIColor()
     var colorCount = 0
+    var nsTimer = NSTimer()
     
     @IBOutlet var gridButtons: [UIButton]!
     @IBOutlet weak var timeLabel: UILabel!
@@ -26,7 +27,9 @@ class TaskGridColorsController: UIViewController {
         if sender.backgroundColor == color{
             colorCount -= 1
             sender.enabled = false
+            sender.alpha = 0.4
             if colorCount == 0{ //person won
+                nsTimer.invalidate()
                 winLoseLabel.text = "You Won!"
                 winLoseLabel.hidden = false
                 homeLabel.hidden = false
@@ -36,43 +39,61 @@ class TaskGridColorsController: UIViewController {
                 }
             }
         }else{//Person Lost!!
+            nsTimer.invalidate()
             winLoseLabel.text = "You Lost!"
             winLoseLabel.hidden = false
             homeLabel.hidden = false
         }
     }
     
-    
-    
     func createBoard(){
+        var runAgain = true
         for square in gridButtons{
             let ran = arc4random_uniform(5)
             if ran == 0{
+                if UIColor.redColor() == color{
+                    runAgain = false
+                }
                 square.backgroundColor = UIColor.redColor()
                 if color == UIColor.redColor(){
                     colorCount += 1
                 }
             }else if ran == 1{
+                if UIColor.greenColor() == color{
+                    runAgain = false
+                }
                 square.backgroundColor = UIColor.greenColor()
                 if color == UIColor.greenColor(){
                     colorCount += 1
                 }
             }else if ran == 2{
+                if UIColor.blueColor() == color{
+                    runAgain = false
+                }
                 square.backgroundColor = UIColor.blueColor()
                 if color == UIColor.blueColor(){
                     colorCount += 1
                 }
             }else if ran == 3{
+                if UIColor.yellowColor() == color{
+                    runAgain = false
+                }
                 square.backgroundColor = UIColor.yellowColor()
                 if color == UIColor.yellowColor(){
                     colorCount += 1
                 }
             }else if ran == 4{
+                if UIColor.grayColor() == color{
+                    runAgain = false
+                }
                 square.backgroundColor = UIColor.grayColor()
                 if color == UIColor.grayColor(){
                     colorCount += 1
                 }
             }
+        }
+        if runAgain{
+            createBoard()
         }
     }
     
@@ -93,6 +114,7 @@ class TaskGridColorsController: UIViewController {
         }else if ran == 4{
             color = UIColor.grayColor()
             colorLabel.text = "Tap all of this color: gray"
+        }else{
         }
     }
     
@@ -115,7 +137,7 @@ class TaskGridColorsController: UIViewController {
         homeLabel.hidden = true
         winLoseLabel.hidden = true
         timeLabel.text = String(timerCount)
-         var _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
+         nsTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
     }
     
     override func didReceiveMemoryWarning() {
