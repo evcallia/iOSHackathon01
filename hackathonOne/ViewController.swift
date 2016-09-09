@@ -8,11 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+var difficulty = [25,25,25]
 
+class ViewController: UIViewController {
+    
+    @IBOutlet var starts: [UIButton]!
+    
+    @IBAction func resetClicked(sender: UIButton) {
+        difficulty = [25,25,25]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        var ran = arc4random_uniform(UInt32(starts.count))
+        for start in starts{
+            if start.hidden == false{
+                start.hidden = true
+                start.setTitle("Start", forState: .Normal)
+            }
+        }
+        starts[Int(ran)].hidden = false
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,6 +14,10 @@
 		9244A7341D831C4000F94EB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9244A7321D831C4000F94EB5 /* LaunchScreen.storyboard */; };
 		9244A73F1D831C4000F94EB5 /* hackathonOneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244A73E1D831C4000F94EB5 /* hackathonOneTests.swift */; };
 		9244A74A1D831C4000F94EB5 /* hackathonOneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244A7491D831C4000F94EB5 /* hackathonOneUITests.swift */; };
+		9244A7581D8329E000F94EB5 /* TaskGridColorsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244A7571D8329E000F94EB5 /* TaskGridColorsController.swift */; };
+		9244A75A1D83536800F94EB5 /* TaskWordPuzzleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244A7591D83536800F94EB5 /* TaskWordPuzzleController.swift */; };
+		9244A75C1D83631200F94EB5 /* TaskPushTheButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244A75B1D83631200F94EB5 /* TaskPushTheButtonController.swift */; };
+		9244A75E1D83699C00F94EB5 /* DontPushTheButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244A75D1D83699C00F94EB5 /* DontPushTheButtonController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		9244A7451D831C4000F94EB5 /* hackathonOneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hackathonOneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9244A7491D831C4000F94EB5 /* hackathonOneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackathonOneUITests.swift; sourceTree = "<group>"; };
 		9244A74B1D831C4000F94EB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9244A7571D8329E000F94EB5 /* TaskGridColorsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskGridColorsController.swift; sourceTree = "<group>"; };
+		9244A7591D83536800F94EB5 /* TaskWordPuzzleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskWordPuzzleController.swift; sourceTree = "<group>"; };
+		9244A75B1D83631200F94EB5 /* TaskPushTheButtonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskPushTheButtonController.swift; sourceTree = "<group>"; };
+		9244A75D1D83699C00F94EB5 /* DontPushTheButtonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DontPushTheButtonController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 				9244A7291D831C4000F94EB5 /* AppDelegate.swift */,
 				9244A72B1D831C4000F94EB5 /* ViewController.swift */,
 				9244A72D1D831C4000F94EB5 /* Main.storyboard */,
+				9244A7591D83536800F94EB5 /* TaskWordPuzzleController.swift */,
+				9244A75B1D83631200F94EB5 /* TaskPushTheButtonController.swift */,
+				9244A75D1D83699C00F94EB5 /* DontPushTheButtonController.swift */,
+				9244A7571D8329E000F94EB5 /* TaskGridColorsController.swift */,
 				9244A7301D831C4000F94EB5 /* Assets.xcassets */,
 				9244A7321D831C4000F94EB5 /* LaunchScreen.storyboard */,
 				9244A7351D831C4000F94EB5 /* Info.plist */,
@@ -256,8 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9244A7581D8329E000F94EB5 /* TaskGridColorsController.swift in Sources */,
 				9244A72C1D831C4000F94EB5 /* ViewController.swift in Sources */,
+				9244A75E1D83699C00F94EB5 /* DontPushTheButtonController.swift in Sources */,
+				9244A75A1D83536800F94EB5 /* TaskWordPuzzleController.swift in Sources */,
 				9244A72A1D831C4000F94EB5 /* AppDelegate.swift in Sources */,
+				9244A75C1D83631200F94EB5 /* TaskPushTheButtonController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
