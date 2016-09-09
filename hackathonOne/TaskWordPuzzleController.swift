@@ -13,7 +13,7 @@ import UIKit
 class TaskWordPuzzleController: UIViewController {
     
     var timerCount = difficulty[1]
-    let wordList = ["hello", "mouse", "puzzle", "ocean"]
+    let wordList = ["hello", "mouse", "puzzle", "butt", "hair", "onyx", "fluke", "railroad", "dojo", "program", "bubble", "supercalifragilisticexpialidocious", "southwest", "jump"]
     var scrambledWord = ""
     var word = String()
     
